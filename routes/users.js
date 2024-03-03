@@ -13,7 +13,6 @@ router.get("/", (req, res) => {
   res.status(200).json({
     seccuss: true,
     message: "User Fetched Seccussfully",
-    // leght: users.users.length(),
     data: users,
   });
 });

@@ -1,7 +1,7 @@
 const express = require("express");
 // const { users } = require("./data/users.json");
 const userRoute = require("./routes/users");
-// const bookRoute = require("./routes/books");
+const bookRoute = require("./routes/books");
 
 const app = express();
 const PORT = 8080;
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/users", userRoute);
-// app.use("/books", bookRoute);
+app.use("/books", bookRoute);
 app.get("*", (req, res) => {
   res.status(501).json({
     Error: "INVALID PATH",
